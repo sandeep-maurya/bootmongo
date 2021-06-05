@@ -20,27 +20,27 @@ public class BootmongoApplication {
 		SpringApplication.run(BootmongoApplication.class, args);
 	}
 
-	@Bean
-	CommandLineRunner commandLineRunner(StudentRepository studentRepository){
-		return args -> {
-			Address address = new Address(
-					"India",
-					"Pune",
-					"4311016"
-			);
-			Student student = new Student(
-					"Rohit",
-					"Maurya",
-					"rohit@gmail.com",
-					Gender.MALE,
-					address,
-					new ArrayList<>(Arrays.asList("Computer Science","Physics")),
-					LocalDateTime.now()
-			);
-
-			studentRepository.insert(student);
-
-		};
-	}
+//	@Bean
+//	CommandLineRunner commandLineRunner(StudentRepository studentRepository){
+//		return args -> {
+//			Address address = new Address(
+//					"India",
+//					"Pune",
+//					"4311016"
+//			);
+//			Student student = new Student(
+//					"Rohit",
+//					"Maurya",
+//					"rohit@gmail.com",
+//					Gender.MALE,
+//					address,
+//					new ArrayList<>(Arrays.asList("Computer Science","Physics")),
+//					LocalDateTime.now()
+//			);
+//
+//			studentRepository.insert(student);
+//
+//		};
+//	}
 
 }
